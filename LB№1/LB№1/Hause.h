@@ -1,47 +1,47 @@
-
-
-
-#include <ctime>
 #include "string.h"
 
-class Hause
+namespace Program
 {
-private:
-	unsigned int id;
-	unsigned int nomApartment;
-	unsigned int area;
-	unsigned int floor;
-	unsigned int numKomnat;
-	char autdoors[20];
-	char styleHause[20];
-	unsigned int exploitation;
+	typedef unsigned int ui;
+	class Hause
+	{
+	private:
+		ui id;
+		ui nomApartment;
+		ui area;
+		ui floor;
+		ui numKomnat;
+		char* autdoors;
+		char* styleHause;
+		ui exploitation;
 
-public:
-	Hause();
-	Hause(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, char*, char*, unsigned int);
-	//Hause(const Hause &);
-	//~Hause();
+	public:
+		Hause();
+		Hause(ui, ui, ui, ui, ui, char*, char*, ui);
+		Hause(const Hause &);
 
-	void setId(unsigned int);
-	void setNomApartment(unsigned int);
-	void setArea(unsigned int);
-	void setFloor(unsigned int);
-	void setNumKomnat(unsigned int);
-	void setAutdoors(char*);
-	void setStyleHause(char*);
-	void setExploitation(unsigned int);
 
-	unsigned int getId();
-	unsigned int getNomApartment();
-	unsigned int getArea();
-	unsigned int getFloor();
-	unsigned int getNumKomnat();
-	char* getAutdoors();
-	char* getStyleHause();
-	unsigned int getExploitation();
+		void setId(ui);
+		void setNomApartment(ui);
+		void setArea(ui);
+		void setFloor(ui);
+		void setNumKomnat(ui);
+		void setAutdoors(char*);
+		void setStyleHause(char*);
+		void setExploitation(ui);
 
-	void print();
-	void komnat(unsigned int);
-	void komnatFloor(unsigned int, unsigned int, unsigned int);
-	void ZadArea(unsigned int);
-};
+		ui getId();
+		ui getNomApartment();
+		ui getArea();
+		ui getFloor();
+		ui getNumKomnat();
+		char* getAutdoors();
+		char* getStyleHause();
+		ui getExploitation();
+
+		void print();
+		
+
+		~Hause();
+	};
+}
